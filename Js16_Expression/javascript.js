@@ -18,3 +18,17 @@ var code;
 } 
 
 }
+
+function societ(){
+    var filtre= /^\w+\s+$/;
+    var truc = document.getElementById("societe");
+    var resultat =filtre.test(truc.value);
+    console.log(resultat);
+    if (resultat == false){
+        truc.value = "";   
+        alert("Societer incorrect")
+    
+    } else if(resultat == true){
+        alert("Societer correct");
+    }
+}
