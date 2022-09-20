@@ -12,23 +12,23 @@
     <h1>Vos coordonnées</h1>
     <p style="color: red ;"><b> *Ces zones sont obligatoires pour envoyer le formulaire.</b></p>
     <form id="form1" name="form1" onSubmit="">
-        <label for="societe"><b>Société : </b></label><input type="text" name="societe" id="societe" onchange="societ()" required > <b style="color: red;"> *</b>
+        <label for="societe"><b>Société : </b></label><input type="text" name="societe" id="societe" required > <b style="color: red;"> *</b>
         <br><br>
-        <label for="contacter"><b>Personne à contacter : </b></label><input type="text" name="contacter" id="contacter" required ><b style="color: red;"> *</b>
+        <label for="contacter"><b>Personne à contacter : </b></label><input type="text" name="contacter" id="contacter"  required> <b style="color: red;"> *</b>
         <br><br>
         <label for="entreprise"><b>Adresse de l'entreprise : </b></label><textarea name="entreprise" rows="4" cols="20"></textarea>
         <br><br>
-        <label for="postal"><b>Code postal : </b></label><input type="number" name="postal" id="postal" required onchange="codepostal()"><b style="color: red;"> *</b>
+        <label for="postal"><b>Code postal : </b></label><input type="text" name="postal" id="postal"  required> <b style="color: red;"> *</b>
         <br><br>
-        <label for="ville"><b> Ville :</b> </label><input type="text" name="ville" id="ville" required><b style="color: red;"> *</b>
+        <label for="ville"><b> Ville :</b> </label><input type="text" name="ville" id="ville"  required><b style="color: red;"> *</b>
         <br><br>
-        <label for="mail"><b> E-mail :</b> </label><input type="email" name="mail" id="mail"  required><b style="color: red;"> *</b>
+        <label for="mail"><b> E-mail :</b> </label><input type="email" name="mail" id="mail"   required><b style="color: red;"> *</b>
         <br><br>
         <label for="phone"><b> Téléphone :</b> </label><input type="text" name="phone" id="phone" >
         <br>
         <label for="tech"><b> Sélectionnez l'environnement technique du projet : </b></label>
         <br><br>
-        <select id="sujet" onclick="projet()"> 
+        <select id="sujet" > 
             <option value=" " selected>Choisissez</option>
             <option value="Java">Java</option>
             <option value="SQL server">SQL server</option>
@@ -42,7 +42,7 @@
          <textarea name="tech" rows="4" cols="20" id="choix" ></textarea>
 
         <br><br>
-        <input type="submit" name="but" value="Envoyer" />
+        <input type="submit" name="but" value="Envoyer"  id="boutton"/>
         <input type="reset" name="but" value="Effacer" />
 
 
