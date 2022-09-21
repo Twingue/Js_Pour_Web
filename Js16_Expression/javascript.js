@@ -94,20 +94,23 @@ function villee(){
     } 
     });
 
+
     var telephone = document.getElementById("phone");
     telephone.addEventListener("change", tel)
-
-function tel(){
-    var filtre=/^(?:(?:\+|00)33[\s.-]{0,3}(?:\(0\)[\s.-]{0,3})?|0)[1-9](?:(?:[\s.-]?\d{2}){4}|\d{2}(?:[\s.-]?\d{3}){2})$/
-    var resultat =filtre.test(telephone.value);
+    
+    function tel(){
+        //filtre fixe et portable
+    var filtre =/^\+33(.|-| )?(3|6)((.|-| )?[0-9]{2}){4}$/ 
+    var filtre2 = /^0(3|6)((.|-| )?[0-9]{2}){4}$/
+    var resultat =filtre.test(telephone.value)||filtre2.test(telephone.value);
     console.log(resultat);
     if (resultat == false){
         telephone.value = "";   
         alert("Numéro de téléphone incorrect")
     
     } 
-}
-
+    }
+    
 
 /*
 var machin = document.getElementById("bouton");
